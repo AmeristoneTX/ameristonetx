@@ -158,3 +158,40 @@ footer {
 .contact-inner a:hover {
   text-decoration: underline;
 }
+
+/* About page gray background */
+.content.gray {
+  background: #f5f7fa; /* slightly warmer gray than current */
+  padding: 70px 20px;
+}
+
+/* Content box styling */
+.content.gray div {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Hero adjustments for About page */
+.hero {
+  background: #0b1f33 url('flag-background.jpg') center/cover no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 2px;
+}
+
+.hero-content .tagline {
+  color: #dbe7f3;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
