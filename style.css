@@ -271,4 +271,63 @@ footer {
     flex-direction: column;
     gap: 15px;
   }
+}/* =========================
+   ABOUT PAGE – SIMPLE CLEAN STYLES
+   ========================= */
+
+.about-hero {
+  background: #0b1f33;
+  min-height: 50vh;
 }
+
+.about-section {
+  background: #f5f7fa;
+  padding: 80px 20px;
+}
+
+.about-card {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 60px 50px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+
+.about-intro {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.values-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.values-box span {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #0b1f33;
+}
+
+@media (max-width: 700px) {
+  .about-card {
+    padding: 45px 30px;
+  }
+
+  .values-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
