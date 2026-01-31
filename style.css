@@ -8,7 +8,7 @@
 }
 
 /* =========================
-   GLOBAL
+   VARIABLES
 ========================= */
 :root {
   --navy: #0b1c2d;
@@ -18,11 +18,38 @@
   --link-light: #cfe2ff;
 }
 
+/* =========================
+   GLOBAL DEFAULT (HOME PAGE)
+========================= */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   background-color: var(--navy);
   color: var(--white);
   line-height: 1.6;
+}
+
+/* =========================
+   ABOUT + SERVICES PAGES
+   (GitHub Pages override)
+========================= */
+body.page-about,
+body.page-services {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+/* Force all text navy on those pages */
+body.page-about h1,
+body.page-about h2,
+body.page-about h3,
+body.page-about p,
+body.page-about li,
+body.page-services h1,
+body.page-services h2,
+body.page-services h3,
+body.page-services p,
+body.page-services li {
+  color: var(--navy);
 }
 
 /* =========================
@@ -35,7 +62,7 @@ img {
 }
 
 /* =========================
-   NAV
+   NAV (STAYS DARK ON ALL PAGES)
 ========================= */
 .nav {
   background-color: var(--navy);
@@ -121,7 +148,7 @@ img {
 }
 
 /* =========================
-   CARDS (BASE)
+   CARDS
 ========================= */
 .card {
   border-radius: 12px;
@@ -130,45 +157,17 @@ img {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================
-   DARK CARD (DEFAULT)
-========================= */
+/* Dark cards (home page) */
 .card.dark {
   background: var(--navy-soft);
   color: var(--white);
 }
 
-.card.dark h1,
-.card.dark h2,
-.card.dark h3,
-.card.dark p,
-.card.dark li {
-  color: var(--white);
-}
-
-/* =========================
-   LIGHT CARD (SERVICES FIX)
-========================= */
-.card.light {
+/* Light cards (About + Services pages) */
+body.page-about .card,
+body.page-services .card {
   background: var(--white);
   color: var(--navy);
-}
-
-.card.light h1,
-.card.light h2,
-.card.light h3,
-.card.light p,
-.card.light li {
-  color: var(--navy);
-}
-
-/* =========================
-   ABOUT PAGE SUPPORT
-========================= */
-.about,
-#about {
-  background-color: var(--navy);
-  color: var(--white);
 }
 
 /* =========================
