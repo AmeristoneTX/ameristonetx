@@ -1,9 +1,4 @@
 /* =========================
-   GOOGLE FONTS
-   ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600&display=swap');
-
-/* =========================
    RESET
    ========================= */
 * {
@@ -13,62 +8,27 @@
 }
 
 /* =========================
-   BASE
+   BASE STYLES
    ========================= */
 body {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-  background: #ffffff;
+  font-family: "Merriweather", Georgia, serif;
+  color: #1a1a1a;
+  background: #f9f9f9;
   line-height: 1.75;
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 800;
   color: #0b1f33;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: clamp(1.3rem, 2vw, 1.8rem);
-  margin-bottom: 15px;
-}
-
-p, li {
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-}
-/* =========================
-   CENTERED PAGE HEADER
-   ========================= */
-.page-header {
-  background-color: #0b1f33; /* dark blue to match nav */
-  color: #ffffff;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif; /* modern, clean */
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 15px 0;
+  margin-bottom: 22px;
   letter-spacing: 1px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 700px) {
-  .page-header {
-    font-size: 1.2rem;
-    padding: 10px 0;
-  }
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #222;
 }
 
 /* =========================
@@ -76,76 +36,185 @@ p, li {
    ========================= */
 .site-nav {
   background: #0b1f33;
-  padding: 18px 20px;
+  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .nav-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .nav-logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 35px;
 }
 
 .nav-links li a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-weight: 700;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
 }
 
-.nav-links li a.active,
-.nav-links li a:hover {
-  color: #dbe7f3;
-  text-decoration: underline;
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #f0c040;
+  border-bottom: 2px solid #f0c040;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
 }
 
 /* =========================
    HERO
    ========================= */
 .hero {
-  background: #0b1f33;
-  min-height: 50vh;
+  background: #0b1f33 url('images/flag-background.jpg') center/cover no-repeat;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 20px;
-  color: #ffffff;
+  color: #fff;
+  padding: 50px 20px;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.hero-content .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #dbe7f3;
-}
-
-.service-area {
+.hero-content .service-area {
   font-size: 1rem;
-  margin-top: 5px;
-  color: #a9bfd6;
+  color: #dbe7f3;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   BUSINESS NAME BELOW NAV
+   ========================= */
+.page-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0b1f33;
+  margin: 40px 0 20px 0;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   CONTENT SECTIONS
+   ========================= */
+.about-card, .service-card {
+  background: #fff;
+  padding: 55px 45px;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  margin-bottom: 60px;
+}
+
+.service-block h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.service-block p,
+.service-block ul {
+  margin-bottom: 30px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.service-block ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.service-block ul li {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.text-button {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #0b1f33;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+}
+
+.text-button:hover {
+  background: #0d2a4d;
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 /* =========================
@@ -159,7 +228,7 @@ p, li {
 
 .contact-inner {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .contact-inner a {
@@ -177,198 +246,22 @@ p, li {
 }
 
 /* =========================
-   MAIN CONTENT / SECTIONS
-   ========================= */
-.content,
-.about-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 70px 20px;
-}
-
-.content.gray {
-  background: #f5f7fa;
-  padding: 70px 20px;
-}
-
-.about-card {
-  max-width: 900px;
-  margin: auto;
-  background: #ffffff;
-  padding: 70px 60px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.about-card p {
-  font-size: 1.05rem;
-  margin-bottom: 22px;
-}
-
-.about-intro {
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.about-close {
-  margin-top: 30px;
-  font-weight: 500;
-}
-
-/* Values Box */
-.values-box {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
-  padding: 25px 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.values-box span {
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #0b1f33;
-}
-
-/* =========================
-   SERVICES PAGE
-   ========================= */
-.service-block {
-  margin-bottom: 50px;
-}
-
-.service-block h2 {
-  margin-bottom: 25px;
-  font-size: 1.9rem;
-  color: #0b1f33;
-}
-
-.service-block p,
-.service-block ul {
-  margin-bottom: 30px;
-  line-height: 1.75;
-  font-size: 1.05rem;
-}
-
-.service-block ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-.service-block ul li {
-  margin-bottom: 10px;
-}
-
-/* CTA Button */
-.text-button {
-  display: inline-block;
-  margin-top: 50px;
-  padding: 14px 30px;
-  background: #0b1f33;
-  color: #ffffff;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.text-button:hover {
-  background: #1a3a66;
-}
-
-/* =========================
-   GALLERY
-   ========================= */
-.gallery {
-  padding: 70px 20px;
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
+   RESPONSIVE ADJUSTMENTS
    ========================= */
 @media (max-width: 700px) {
-  .about-card {
-    padding: 45px 30px;
+  .about-card, .service-card {
+    padding: 40px 25px;
   }
 
-  .values-box {
-    flex-direction: column;
-    gap: 15px;
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
+  .hero-content .tagline {
+    font-size: 1.1rem;
   }
-}
-.hero {
-  background: linear-gradient(180deg, #0b1f36 0%, #0e2a47 100%);
-  color: #ffffff;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
 
-.hero-content h1 {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  letter-spacing: 0.12em;
-  margin: 0;
-}
-
-.hero-content h2 {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  letter-spacing: 0.3em;
-  margin: 1rem 0 2rem;
-}
-
-.hero-content .tagline {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.hero-content .service-area {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  opacity: 0.85;
+  .page-title {
+    font-size: 2.2rem;
+  }
 }
