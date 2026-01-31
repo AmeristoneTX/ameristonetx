@@ -1,11 +1,15 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* BASE */
+/* =========================
+   BASE
+========================= */
 body {
   font-family: Georgia, "Times New Roman", serif;
   color: #111;
@@ -13,66 +17,192 @@ body {
   line-height: 1.6;
 }
 
-/* HERO */
-.hero {
-  background: #0b1f33;
-  min-height: 85vh;
+a {
+  text-decoration: none;
+}
+
+/* =========================
+   SITE NAVIGATION
+========================= */
+.site-nav {
+  background-color: #0b1f33;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #0d2a4d;
+}
+
+/* Mobile Navigation */
+@media (max-width: 700px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: #0b1f33 url('images/hero-bg.jpg') no-repeat center center/cover;
+  color: #ffffff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 120px 20px;
 }
 
 .hero-content h1 {
-  color: #ffffff;
-  font-size: clamp(2.2rem, 6vw, 3.5rem);
-  letter-spacing: 2px;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
-.tagline {
-  color: #dbe7f3;
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-.service-area {
-  color: #a9bfd6;
-  font-size: 0.95rem;
-  margin-top: 6px;
-}
-
-/* CONTENT */
-main {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.content {
-  padding: 70px 20px;
-}
-
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.content.gray {
-  background: #f2f2f2;
-}
-
-.content ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.content li {
+.hero-content .tagline {
+  font-size: 1.3rem;
   margin-bottom: 10px;
 }
 
-/* GALLERY */
+.hero-content .service-area {
+  font-size: 1rem;
+  color: #dbe7f3;
+}
+
+/* =========================
+   ABOUT / SERVICES CARD
+========================= */
+.about-card {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  line-height: 1.7;
+}
+
+.about-card h2 {
+  color: #0b1f33;
+  margin-bottom: 20px;
+}
+
+.about-card p,
+.about-card ul {
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+.about-card ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.about-card ul li {
+  margin-bottom: 10px;
+}
+
+/* Values box (for About page) */
+.values-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.values-box span {
+  font-weight: bold;
+  color: #0b1f33;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+  .values-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* =========================
+   SERVICE BLOCKS
+========================= */
+.service-block {
+  margin-bottom: 50px;
+}
+
+.service-block h2 {
+  margin-bottom: 25px;
+  font-size: 1.9rem;
+}
+
+.service-block p,
+.service-block ul {
+  margin-bottom: 30px;
+  line-height: 1.75;
+}
+
+.service-block ul li {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.text-button {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #0b1f33;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.text-button:hover {
+  background: #0d2a4d;
+}
+
+/* =========================
+   GALLERY
+========================= */
 .gallery {
   padding: 70px 20px;
+  text-align: center;
 }
 
 .gallery h2 {
@@ -99,41 +229,20 @@ main {
   border-radius: 14px;
 }
 
-/* CONTACT */
-.contact {
-  background: #0b1f33;
-  color: #ffffff;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.contact h2 {
-  margin-bottom: 20px;
-}
-
-.contact a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.text-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
-  background: #ffffff;
-  color: #0b1f33;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  color: #666;
+  padding: 25px 10px;
+  background-color: #0b1f33;
+  color: #ffffff;
+  font-size: 0.95rem;
 }
 
+/* =========================
+   CONTACT BAR
+========================= */
 .contact-bar {
   background-color: #0b1f33;
   padding: 14px 10px;
@@ -158,141 +267,3 @@ footer {
 .contact-inner a:hover {
   text-decoration: underline;
 }
-
-/* About page gray background */
-.content.gray {
-  background: #f5f7fa; /* slightly warmer gray than current */
-  padding: 70px 20px;
-}
-
-/* Content box styling */
-.content.gray div {
-  background: #ffffff;
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-/* =========================
-   GLOBAL DESIGN SYSTEM
-   ========================= */
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #111;
-  background: #ffffff;
-  line-height: 1.6;
-}
-
-/* =========================
-   HERO (ALL PAGES)
-   ========================= */
-
-.hero {
-  background: #0b1f33;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-content h1 {
-  color: #ffffff;
-  font-size: clamp(2.2rem, 6vw, 3.5rem);
-  letter-spacing: 2px;
-}
-
-.tagline {
-  color: #dbe7f3;
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-.service-area {
-  color: #a9bfd6;
-  font-size: 0.95rem;
-  margin-top: 6px;
-}
-
-/* =========================
-   CONTENT
-   ========================= */
-
-main {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.content {
-  padding: 70px 20px;
-}
-
-.content.gray,
-.about-section {
-  background: #f5f7fa;
-}
-
-/* =========================
-   ABOUT PAGE
-   ========================= */
-
-.about-hero {
-  min-height: 50vh;
-}
-
-.about-card {
-  max-width: 900px;
-  margin: auto;
-  background: #ffffff;
-  padding: 60px 50px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.about-card p {
-  font-size: 1.05rem;
-  margin-bottom: 22px;
-}
-
-.about-intro {
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.about-close {
-  margin-top: 30px;
-  font-weight: 500;
-}
-
-.values-box {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
-  padding: 25px 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.values-box span {
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #0b1f33;
-}
-
-/* =========================
-   SERVICES PAGE
-   ========================= */
-
-.text-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
-  background: #0b1f33;
-  color: #ffffff;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
