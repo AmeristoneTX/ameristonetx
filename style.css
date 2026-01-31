@@ -29,7 +29,8 @@ body {
    IMAGES
 ========================= */
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -91,12 +92,6 @@ img {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.hero-card h1,
-.hero-card h2,
-.hero-card p {
-  color: var(--white);
-}
-
 /* =========================
    CONTACT STRIP
 ========================= */
@@ -105,7 +100,6 @@ img {
   text-align: center;
   padding: 12px;
   font-size: 14px;
-  color: var(--white);
 }
 
 .contact-strip a {
@@ -123,32 +117,49 @@ img {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 24px 16px 40px;
+  padding: 32px 16px 40px;
 }
 
 /* =========================
-   CARDS / SECTIONS
+   CARDS (BASE)
 ========================= */
 .card {
-  background: var(--navy-soft);
-  color: var(--white);
   border-radius: 12px;
   padding: 22px;
   margin-bottom: 24px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
 }
 
-.card h1,
-.card h2,
-.card h3,
-.card p,
-.card li {
+/* =========================
+   DARK CARD (DEFAULT)
+========================= */
+.card.dark {
+  background: var(--navy-soft);
   color: var(--white);
 }
 
-/* Remove old light card look */
+.card.dark h1,
+.card.dark h2,
+.card.dark h3,
+.card.dark p,
+.card.dark li {
+  color: var(--white);
+}
+
+/* =========================
+   LIGHT CARD (SERVICES FIX)
+========================= */
 .card.light {
-  background: var(--navy-soft);
+  background: var(--white);
+  color: var(--navy);
+}
+
+.card.light h1,
+.card.light h2,
+.card.light h3,
+.card.light p,
+.card.light li {
+  color: var(--navy);
 }
 
 /* =========================
@@ -157,14 +168,6 @@ img {
 .about,
 #about {
   background-color: var(--navy);
-  color: var(--white);
-}
-
-.about h1,
-.about h2,
-.about h3,
-.about p,
-.about li {
   color: var(--white);
 }
 
@@ -189,7 +192,6 @@ img {
 ========================= */
 .footer {
   text-align: center;
-  color: var(--white);
   padding: 20px;
   font-size: 13px;
   opacity: 0.85;
@@ -206,4 +208,12 @@ img {
   .gallery img {
     height: 200px;
   }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+a:focus-visible {
+  outline: 2px solid var(--link-light);
+  outline-offset: 3px;
 }
