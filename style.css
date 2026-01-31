@@ -337,3 +337,38 @@ footer {
     gap: 15px;
   }
 }
+.hero {
+  background: linear-gradient(180deg, #0b1f36 0%, #0e2a47 100%);
+  color: #ffffff;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.hero-content h2 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: 0.3em;
+  margin: 1rem 0 2rem;
+}
+
+.hero-content .tagline {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero-content .service-area {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0.85;
+}
