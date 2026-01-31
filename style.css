@@ -48,6 +48,28 @@ p, li {
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
 }
+/* =========================
+   CENTERED PAGE HEADER
+   ========================= */
+.page-header {
+  background-color: #0b1f33; /* dark blue to match nav */
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* modern, clean */
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 15px 0;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 700px) {
+  .page-header {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+}
 
 /* =========================
    NAVIGATION
