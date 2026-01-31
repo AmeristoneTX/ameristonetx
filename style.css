@@ -1,267 +1,143 @@
-/* =========================
-   RESET
-   ========================= */
+/* Reset and body */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
-/* =========================
-   BASE STYLES
-   ========================= */
 body {
-  font-family: "Merriweather", Georgia, serif;
-  color: #1a1a1a;
-  background: #f9f9f9;
-  line-height: 1.75;
-}
-
-h1, h2, h3 {
-  font-family: "Roboto Slab", Georgia, serif;
-  font-weight: 800;
+  background: #f6f6f6;
   color: #0b1f33;
-  margin-bottom: 22px;
-  letter-spacing: 1px;
+  line-height: 1.6;
 }
 
-p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-/* =========================
-   NAVIGATION
-   ========================= */
+/* Navigation Bar */
 .site-nav {
-  background: #0b1f33;
-  padding: 20px 0;
+  background: #0b1f33; /* dark, professional */
+  padding: 15px 20px;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 
 .nav-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  align-items: center;
 }
 
 .nav-logo {
-  font-size: 2rem;
   font-weight: 900;
-  color: #fff;
+  font-size: 1.8rem;
+  color: #ffd700; /* gold, visible */
   text-decoration: none;
-  letter-spacing: 2px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 25px;
 }
 
 .nav-links li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
-  transition: color 0.3s, border-bottom 0.3s;
-  padding-bottom: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #f0c040;
-  border-bottom: 2px solid #f0c040;
+  color: #ffd700;
 }
 
-/* MOBILE NAV */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-  }
-}
-
-/* =========================
-   HERO
-   ========================= */
-.hero {
-  background: #0b1f33 url('images/flag-background.jpg') center/cover no-repeat;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 50px 20px;
-}
-
-.hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 900;
-  margin-bottom: 15px;
-}
-
-.hero-content .tagline {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-.hero-content .service-area {
-  font-size: 1rem;
-  color: #dbe7f3;
-  letter-spacing: 0.5px;
-}
-
-/* =========================
-   BUSINESS NAME BELOW NAV
-   ========================= */
+/* Centered Business Name */
 .page-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 900;
-  color: #0b1f33;
-  margin: 40px 0 20px 0;
+  color: #0b1f33; /* dark for readability */
+  margin: 20px 0;
   letter-spacing: 2px;
 }
 
-/* =========================
-   CONTENT SECTIONS
-   ========================= */
-.about-card, .service-card {
-  background: #fff;
-  padding: 55px 45px;
-  border-radius: 14px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-  margin-bottom: 60px;
+/* Hero Section */
+.hero {
+  background: #e6e6e6; /* subtle grey */
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.service-block h2 {
-  margin-bottom: 25px;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.service-block p,
-.service-block ul {
-  margin-bottom: 30px;
-  line-height: 1.8;
-  font-size: 1.1rem;
-}
-
-.service-block ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-.service-block ul li {
+.hero .tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
-.text-button {
-  display: inline-block;
-  padding: 14px 30px;
+.hero .service-area {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Contact Bar */
+.contact-bar {
   background: #0b1f33;
   color: #fff;
-  font-weight: 700;
-  border-radius: 30px;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+}
+
+.contact-bar a {
+  color: #ffd700;
   text-decoration: none;
-  letter-spacing: 1px;
-  transition: background 0.3s;
+  margin: 0 8px;
 }
 
-.text-button:hover {
-  background: #0d2a4d;
+/* Main Content */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* =========================
-   GALLERY
-   ========================= */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+.content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.gallery-grid img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* Footer */
 footer {
+  background: #0b1f33;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #666;
+  padding: 20px 0;
+  font-weight: 600;
 }
 
-/* =========================
-   CONTACT BAR
-   ========================= */
-.contact-bar {
-  background-color: #0b1f33;
-  padding: 14px 10px;
-  text-align: center;
-}
-
-.contact-inner {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.contact-inner a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.contact-inner span {
-  color: #8faed1;
-}
-
-.contact-inner a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   RESPONSIVE ADJUSTMENTS
-   ========================= */
-@media (max-width: 700px) {
-  .about-card, .service-card {
-    padding: 40px 25px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content .tagline {
-    font-size: 1.1rem;
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .page-title {
     font-size: 2.2rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.3rem;
   }
 }
