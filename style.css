@@ -1,32 +1,60 @@
 /* =========================
+   GOOGLE FONTS
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600&display=swap');
+
+/* =========================
    RESET
-========================= */
+   ========================= */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* =========================
    BASE
-========================= */
+   ========================= */
 body {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #111;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
   background: #ffffff;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
-a {
-  text-decoration: none;
+h1, h2, h3 {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #0b1f33;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  margin-bottom: 15px;
+}
+
+p, li {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
 }
 
 /* =========================
-   SITE NAVIGATION
-========================= */
+   NAVIGATION
+   ========================= */
 .site-nav {
-  background-color: #0b1f33;
-  padding: 15px 0;
+  background: #0b1f33;
+  padding: 18px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -34,215 +62,73 @@ a {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between;
 }
 
 .nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #ffffff;
-  font-size: 1.8rem;
-  font-weight: bold;
+  text-decoration: none;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-links li a {
   color: #ffffff;
+  text-decoration: none;
   font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s;
+  transition: color 0.3s;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  background-color: #0d2a4d;
-}
-
-/* Mobile Navigation */
-@media (max-width: 700px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 12px;
-  }
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #dbe7f3;
+  text-decoration: underline;
 }
 
 /* =========================
    HERO
-========================= */
+   ========================= */
 .hero {
-  background: #0b1f33 url('images/hero-bg.jpg') no-repeat center center/cover;
-  color: #ffffff;
+  background: #0b1f33;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 120px 20px;
+  padding: 40px 20px;
+  color: #ffffff;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero-content .tagline {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.hero-content .service-area {
-  font-size: 1rem;
-  color: #dbe7f3;
-}
-
-/* =========================
-   ABOUT / SERVICES CARD
-========================= */
-.about-card {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 60px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  line-height: 1.7;
-}
-
-.about-card h2 {
-  color: #0b1f33;
-  margin-bottom: 20px;
-}
-
-.about-card p,
-.about-card ul {
-  margin-bottom: 25px;
-  font-size: 1.05rem;
-}
-
-.about-card ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-.about-card ul li {
-  margin-bottom: 10px;
-}
-
-/* Values box (for About page) */
-.values-box {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
-  padding: 25px 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.values-box span {
-  font-weight: bold;
-  color: #0b1f33;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: 1px;
 }
 
-@media (max-width: 700px) {
-  .values-box {
-    flex-direction: column;
-    gap: 15px;
-  }
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #dbe7f3;
 }
 
-/* =========================
-   SERVICE BLOCKS
-========================= */
-.service-block {
-  margin-bottom: 50px;
-}
-
-.service-block h2 {
-  margin-bottom: 25px;
-  font-size: 1.9rem;
-}
-
-.service-block p,
-.service-block ul {
-  margin-bottom: 30px;
-  line-height: 1.75;
-}
-
-.service-block ul li {
-  margin-bottom: 10px;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.text-button {
-  display: inline-block;
-  padding: 14px 30px;
-  background: #0b1f33;
-  color: #fff;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.text-button:hover {
-  background: #0d2a4d;
-}
-
-/* =========================
-   GALLERY
-========================= */
-.gallery {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  text-align: center;
-  padding: 25px 10px;
-  background-color: #0b1f33;
-  color: #ffffff;
-  font-size: 0.95rem;
+.service-area {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #a9bfd6;
 }
 
 /* =========================
    CONTACT BAR
-========================= */
+   ========================= */
 .contact-bar {
   background-color: #0b1f33;
   padding: 14px 10px;
@@ -266,4 +152,166 @@ footer {
 
 .contact-inner a:hover {
   text-decoration: underline;
+}
+
+/* =========================
+   MAIN CONTENT / SECTIONS
+   ========================= */
+.content,
+.about-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+.content.gray {
+  background: #f5f7fa;
+  padding: 70px 20px;
+}
+
+.about-card {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 70px 60px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+
+.about-intro {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.about-close {
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+/* Values Box */
+.values-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.values-box span {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #0b1f33;
+}
+
+/* =========================
+   SERVICES PAGE
+   ========================= */
+.service-block {
+  margin-bottom: 50px;
+}
+
+.service-block h2 {
+  margin-bottom: 25px;
+  font-size: 1.9rem;
+  color: #0b1f33;
+}
+
+.service-block p,
+.service-block ul {
+  margin-bottom: 30px;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.service-block ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.service-block ul li {
+  margin-bottom: 10px;
+}
+
+/* CTA Button */
+.text-button {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 30px;
+  background: #0b1f33;
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.text-button:hover {
+  background: #1a3a66;
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+.gallery {
+  padding: 70px 20px;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 700px) {
+  .about-card {
+    padding: 45px 30px;
+  }
+
+  .values-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
