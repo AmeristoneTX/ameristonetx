@@ -382,4 +382,26 @@ footer {
     display: none; /* for now, optional: add mobile toggle later */
   }
 }
+/* ===== Services Page ===== */
+.page-header {
+  text-align: center;
+  margin: 2rem 0;
+}
 
+.services-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.services-section .service {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.services-section .service h2 {
+  color: #333;
+  margin-bottom: .5rem;
+}
