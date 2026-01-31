@@ -8,9 +8,9 @@
 /* ---------- BASE ---------- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  background-color: #f7f9fc;
+  background-color: #f6f8fb;
   color: #1a1a1a;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 a {
@@ -19,7 +19,6 @@ a {
 }
 
 .container {
-  width: 100%;
   max-width: 1100px;
   margin: auto;
   padding: 0 1.25rem;
@@ -39,8 +38,9 @@ a {
 
 .logo {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .nav a {
@@ -55,77 +55,93 @@ a {
 
 /* ---------- HERO ---------- */
 .hero {
-  background-color: #1b3a66;
-  color: white;
+  background:
+    linear-gradient(rgba(10,37,64,0.75), rgba(10,37,64,0.75)),
+    url("images/IMG_0735.jpeg") center / cover no-repeat;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding: 4rem 1rem;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: auto;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.4px;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
 }
 
 .cta-button {
   display: inline-block;
   background-color: #ffffff;
   color: #0a2540;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border-radius: 4px;
   font-weight: 700;
 }
 
-/* ---------- TRUST ---------- */
-.trust {
+/* ---------- VALUE ---------- */
+.value {
   background-color: #ffffff;
-  padding: 3rem 0;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  text-align: center;
-}
-
-.trust h3 {
-  color: #0a2540;
-  margin-bottom: 0.5rem;
-}
-
-/* ---------- SERVICES ---------- */
-.services {
   padding: 4rem 0;
 }
 
-.services h2 {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  color: #0a2540;
-}
-
-.service-grid {
+.value-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  text-align: center;
 }
 
-.service-card {
-  background-color: #ffffff;
-  padding: 1.75rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.service-card h4 {
+.value h3 {
   color: #0a2540;
   margin-bottom: 0.75rem;
+}
+
+/* ---------- FEATURED PROJECT ---------- */
+.featured-project {
+  background-color: #eef2f7;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.featured-project h2 {
+  color: #0a2540;
+  margin-bottom: 2rem;
+}
+
+.featured-project img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.featured-text {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+}
+
+/* ---------- SERVICE AREA ---------- */
+.service-area {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.service-area h2 {
+  color: #0a2540;
+  margin-bottom: 1rem;
 }
 
 /* ---------- CONTACT CTA ---------- */
@@ -133,7 +149,7 @@ a {
   background-color: #0a2540;
   color: white;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .contact-cta h2 {
@@ -154,10 +170,10 @@ a {
   font-size: 0.9rem;
 }
 
-/* ---------- MOBILE TWEAKS ---------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .nav a {
