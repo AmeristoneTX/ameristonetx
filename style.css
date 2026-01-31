@@ -5,17 +5,17 @@
   padding: 0;
 }
 
-/* BASE */
+/* BODY — NAVY BACKGROUND */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  background-color: #0b1c2d; /* Navy */
+  background-color: #0b1c2d; /* NAVY */
   color: #000;
   line-height: 1.6;
 }
 
+/* IMAGES */
 img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   display: block;
 }
 
@@ -36,7 +36,6 @@ img {
 .brand {
   color: #fff;
   font-weight: 600;
-  font-size: 16px;
 }
 
 .nav-links {
@@ -53,105 +52,76 @@ img {
 
 /* HERO */
 .hero {
-  padding: 40px 16px 20px;
+  padding: 32px 16px;
   display: flex;
   justify-content: center;
 }
 
 .hero-card {
-  background: #fff;
-  padding: 28px 20px;
+  background: #ffffff;
+  padding: 24px 20px;
   border-radius: 10px;
-  text-align: center;
-  max-width: 500px;
+  max-width: 480px;
   width: 100%;
-}
-
-.hero h1 {
-  font-size: 26px;
-  letter-spacing: 1px;
-}
-
-.tagline {
-  font-size: 16px;
-  margin-top: 8px;
-}
-
-.service-area {
-  font-size: 14px;
-  margin-top: 6px;
-  color: #444;
+  text-align: center;
 }
 
 /* CONTACT STRIP */
 .contact-strip {
-  background: #f2f2f2;
+  background: #eaeaea;
   text-align: center;
   padding: 12px;
   font-size: 14px;
 }
 
-.contact-strip a {
-  color: #000;
-  text-decoration: none;
-  margin: 0 6px;
-}
-
-/* MAIN */
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px 16px 40px;
+/* CONTAINER — THIS IS WHAT REVEALS NAVY */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
 }
 
 /* CARDS */
 .card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
-  padding: 22px;
+  padding: 20px;
   margin-bottom: 24px;
 }
 
 .card.light {
-  background: #f7f7f7;
+  background: #f4f4f4;
 }
 
-.card h2 {
-  margin-bottom: 10px;
-}
-
-.card ul {
-  padding-left: 18px;
-}
-
-/* GALLERY */
+/* GALLERY — FIXED IMAGE SIZE */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 14px;
   margin-top: 14px;
 }
 
 .gallery img {
+  height: 220px;              /* 🔑 LIMIT SIZE */
+  object-fit: cover;          /* 🔑 CROP CLEAN */
   border-radius: 8px;
-  object-fit: cover;
 }
 
 /* FOOTER */
 .footer {
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   padding: 20px;
   font-size: 13px;
 }
 
-/* TABLET + DESKTOP */
+/* TABLET / DESKTOP */
 @media (min-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery img {
+    height: 200px;
   }
 }
